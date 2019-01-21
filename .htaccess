@@ -1,0 +1,7 @@
+ErrorDocument 404 http://localhost/ma+h/includes/errors/404.php
+
+RewriteEngine On
+RewriteBase /
+
+RewriteCond %{REQUEST_URI} ^/404/$
+RewriteRule ^(.*)$ includes/errors/404.php [L]
