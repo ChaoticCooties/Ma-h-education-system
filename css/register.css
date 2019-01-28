@@ -1,0 +1,96 @@
+html, body {
+	height: 100%;
+	margin: 0px;
+	font-family: Arial;
+}
+
+body {
+	background-image: url("homebg.png");
+}
+
+#container {
+	position: absolute;
+	margin: auto;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 70%;
+	height: 80%;
+	background-color: #36393f;
+	border-radius: 10px;
+	filter: drop-shadow(0 0 10px #000);
+	color: white;
+}
+
+form {
+	margin: 50px;
+}
+
+#title {
+	text-align: center;
+	font-size: 24px;
+}
+
+.attr {
+	font-size: 12px;
+	margin: 20px 0px 10px 0px;
+	color: #BBBBBB;
+	font-weight: bold;
+}
+
+input[type=text], textarea {
+	width: 100%;
+	font-size: 16px;
+	padding: 8px;
+	box-sizing: border-box;
+	background-color: #303339;
+	color: white;
+	border: 1px solid black;
+	border-radius: 3px;
+}
+
+input[type=text]:focus, textarea:focus {
+	outline: none;
+	border: 1px solid #FED136;
+}
+
+textarea {
+	height: 230px;
+	resize: none;
+}
+
+#button {
+	width: 100%;
+}
+
+input[type=submit] 	{
+	height: 40px;
+	font-size: 16px;
+	font-weight: bold;
+	background-color: #FED136;
+	color: white;
+	border: 0px;
+	border-radius: 3px;
+	outline: none;
+
+}
+
+input[type=submit]:hover {
+	background-color: #C7A000;
+}
+
+input[type=submit] {
+	width: 100%;
+}
+
+a {
+	color: #C7A000;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+
