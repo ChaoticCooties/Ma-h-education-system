@@ -61,22 +61,8 @@
       <div class="container">
         <div class="intro-text">
           <div class="intro-lead-in">The Premiere Math Education Platform. </div>
-              <span>Maths</span>
-              <p>Algebra</p>
-              <p>Calculus</p>
-              <p>Trigonometry</p>
+            <h2><span class="typed"></span></h2>
           </div>
-
-            <pre>
-              <code class="javascript">
-            var typed = new Typed("#typed", {
-              stringsElement: '#typed-strings',
-              backDelay: 500,
-              startDelay: 1000,
-              loop: true,
-            });
-              </code>
-            </pre>
           <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>
         </div>
       </div>
@@ -715,10 +701,11 @@
 
     <!-- Plugin JavaScript -->
     <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
-    <script src="../vendor/typed/typed.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
 
     <!-- Custom scripts for this template -->
     <script src="../js/main.js"></script>
+    <script src="../js/autotype.js"></script>
 
   </body>
 

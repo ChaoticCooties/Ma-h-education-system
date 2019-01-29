@@ -1,7 +1,6 @@
 <?php 
 require_once '../core/start.php';
 
-
 if(Input::exists()) {
     if(Token::check(Input::get('token'))) {
 
@@ -42,13 +41,13 @@ if(Input::exists()) {
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
         <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="<?php echo BASE_URL; ?>css/bootstrap.min.css">
+        <link rel="stylesheet" href="<?php echo BASE_URL; ?>/css/bootstrap.min.css">
 
         <!-- FontAwesome CSS -->
-        <link rel="stylesheet" href="<?php echo BASE_URL; ?>css/font-awesome.min.css">
+        <link rel="stylesheet" href="<?php echo BASE_URL; ?>/css/font-awesome.min.css">
 
         <!-- Styles -->
-        <link rel="stylesheet" href="<?php echo BASE_URL; ?>css/login.css">
+        <link rel="stylesheet" href="<?php echo BASE_URL; ?>/css/login.css">
 </head>
 
 <body>
@@ -57,12 +56,12 @@ if(Input::exists()) {
         <h1> Login </h1>
         <input type="text" name="username" id="username" autocomplete="off" placeholder="Username">
         <input type="password" name="password" id="password" autocomplete="off" placeholder="Password">
-    <input type="hidden" name="token" value="<?php echo Token::generate(); ?>">
-    <button type="submit">Login</button>
-    <label for="remember">
-        <input type="checkbox" name="remember" id="remember"> Remember Me
-    </label>
-    <p> -<a href="register.php">Register</a>- </p>
+        <input type="hidden" name="token" value="<?php echo Token::generate(); ?>">
+        <button type="submit">Login</button>
+        <label for="remember">
+            <input type="checkbox" name="remember" id="remember"> Remember Me
+            <p> -<a href="register.php">Don't have an account?</a>- </p>
+        </label>
     </div>
 </form>
 </body>
