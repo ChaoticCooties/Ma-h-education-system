@@ -1,6 +1,10 @@
 <?php
-//only login
-//only admin
+
+$user = new User();
+if(!$user->isLoggedIn()) {
+    Redirect::to('home.php');
+}
+//ONLY ADMIN
 
 /* Connect to database */
 $conn = mysqli_connect('localhost','root','','sdp');
@@ -9,7 +13,7 @@ if(mysqli_connect_errno()) {
 	die('<script>alert("Connection failed: Please check your SQL connnection!");</script>');
 }
 
-$sql = "SELECT f.id, f.subject, u.username FROM feedback f LEFT JOIN users u ON f.headmasterID = u.id;";
+$sql = "SELECT f.id, f.subject, u.username FROM feedback f LEFT JOIN users u ON f.teacherID = u.id;";
 
 $result = mysqli_query($conn, $sql);
 

@@ -10,7 +10,7 @@ if(mysqli_connect_errno()) {
 }
 
 $id = $_GET["id"];
-$sql = "SELECT f.subject, f.message, u.username FROM feedback f LEFT JOIN users u ON f.headmasterID = u.id WHERE f.id = $id;";
+$sql = "SELECT f.subject, f.message, u.username FROM feedback f LEFT JOIN users u ON f.teacherID = u.id WHERE f.id = $id;";
 
 $result = mysqli_query($conn, $sql);
 $row = mysqli_fetch_assoc($result);

@@ -1,7 +1,8 @@
 <?php
 
 require '../core/start.php';
-//only headmaster
+//ONLY TEACHERS CAN ACCESS
+//NEED TO ADD OUTPUT
 
 $user = new User();
 if(!$user->isLoggedIn()) {
@@ -22,7 +23,7 @@ if(Input::exists()) {
 		die('<script>alert("Connection failed: Please check your SQL connnection!");</script>');
 	}
 
-	$sql = "INSERT INTO feedback (subject,message,datetime,headmasterID) VALUES ('$subject','$message','$datetime','$id')";
+	$sql = "INSERT INTO feedback (subject,message,datetime,teacherID) VALUES ('$subject','$message','$datetime','$id')";
 
 	mysqli_query($conn, $sql);
 
