@@ -1,0 +1,47 @@
+html, body {
+	height: 100%;
+	margin: 0px;
+	font-family: Arial;
+	color: white;
+}
+
+body {
+	background-image: url("../images/homebg.png");
+}
+
+.title {
+	width: 92%;
+	font-size: 24px;
+	margin: 20px 2% 5px 2%;
+	padding: 20px 2%;
+	background-color: #111;
+}
+
+.lesson, .practice {
+	width: 42%;
+	height: 450px;
+	padding: 20px 2%;
+	background-color: #111;
+}
+
+.lesson {
+	margin: 10px 0px 0px 2%;
+	float: left;
+}
+
+.practice {
+	margin: 10px 2% 0px 0px;
+	float: right;
+}
+
+.content {
+	margin-top: 20px;
+}
+
+.content input[type=number] {
+	margin: 5px;
+}
+
+.result {
+	margin: 10px 0px;
+}
