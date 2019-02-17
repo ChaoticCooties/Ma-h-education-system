@@ -1,0 +1,82 @@
+html, body {
+	height: 100%;
+	margin: 0px;
+	font-family: Arial;
+	color: white ;
+}
+
+body {
+	background-image: url("../images/homebg.png");
+}
+
+.container {
+	position: absolute;
+	margin: 70px auto auto auto;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 80%;
+	height: 80%;
+	background-color: #222222;
+	border-radius: 10px;
+	filter: drop-shadow(0 0 10px #000);
+	color: white;
+	overflow: auto;
+}
+
+.title {
+	text-align: center;
+	font-size: 24px;
+	padding: 20px 0px;
+}
+
+.table {
+	position: absolute;
+	margin: 10px auto 10px auto;
+	left: 0;
+	right: 0;
+	width: 95%;
+	border-collapse: collapse;
+}
+
+td {
+	padding: 5px;
+}
+
+tr:hover {
+	background-color: #121212;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+}
+
+.name {
+	width: 30%;
+}
+
+.subject {
+	width: 70%;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #555;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #f1f1f1;
+}
