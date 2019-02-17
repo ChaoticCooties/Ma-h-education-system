@@ -42,9 +42,9 @@
           </li>
           <li class="nav-item">
             <?php if($user->isLoggedIn()): ?>
-              <a class="nav-link js-scroll-trigger" href="../functions/profile.php">Profile</a>
+              <a class="nav-link" href="../functions/profile.php">Profile</a>
             <?php else : ?>
-              <a class="nav-link js-scroll trigger" href="../functions/login.php">Login</a>
+              <a class="nav-link" href="../functions/login.php">Login</a>
             <?php endif; ?>
           </li>
         </ul>

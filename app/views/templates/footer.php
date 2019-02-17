@@ -1,11 +1,14 @@
-<script type="text/javascript" src="<?php echo BASE_URL; ?>js/jquery.js"></script>
-<script type="text/javascript" src="<?php echo BASE_URL; ?>js/tilt.jquery.js"></script>
-<script type="text/javascript" src="<?php echo BASE_URL; ?>js/fade.js"></script>
-<script type="text/javascript" src="<?php echo BASE_URL; ?>js/custom.js"></script>
-<!-- <script type="text/javascript" src="js/TweenMax.js"></script>
-<script type="text/javascript" src="js/ScrollMagic.js"></script>
-<script type="text/javascript" src="js/animation.gsap.js"></script>
-<script type="text/javascript" src="js/jquery.ScrollMagic.min.js"></script>
-<script type="text/javascript" src="js/debug.addIndicators.js"></script> TRYING TO FIX-->
+  <!-- Bootstrap core JavaScript -->
+  <script src="../vendor/jquery/jquery.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.1/typed.min.js'></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="../js/main.js"></script>
+  <script src="../js/autotype.js"></script>
 </body>
 </html>
