@@ -5,16 +5,16 @@ class Config {
 				$config = $GLOBALS['config'];
 				$path = explode('/', $path);
 
-				foreach($path as $bit) { //Fᴏʀ ᴇᴀᴄʜ ᴘᴀᴛʜ sᴇᴛ ᴀs $ʙɪᴛ
-					if(isset($config[$bit])) { //Iꜰ ᴍʏsǫʟ ᴇxɪsᴛs ɪɴsɪᴅᴇ ᴄᴏɴꜰɪɢ, ᴛʜᴇɴ sᴇᴛ ᴄᴏɴꜰɪɢ ᴀs ᴍʏsǫʟ
-						$config = $config[$bit]; //Iꜰ ʜᴏsᴛ ᴇxɪsᴛ ɪɴsɪᴅᴇ ᴄᴏɴꜰɪɢ, ᴄᴏɴꜰɪɢ = ʜᴏsᴛ(127.0.0.1)
+				foreach($path as $bit) { //set as $bit for each path
+					if(isset($config[$bit])) { //If config exists, use config
+						$config = $config[$bit]; //if it doesn't exist, use localhost
 
 					}
 				}
 
-				return $config; //ʀᴇᴛᴜʀɴs ᴛʜᴇ ᴄᴏɴꜰɪɢ ꜰʀᴏᴍ ᴀʙᴏᴠᴇ ^
+				return $config;
 		}
 
-		return false; //ɪꜰ ᴅᴏᴇsɴ'ᴛ ᴇxɪsᴛ, ʀᴇᴛᴜʀɴ ꜰᴀʟsᴇ
+		return false;
 	}
 }
