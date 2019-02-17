@@ -8,16 +8,11 @@
       target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
       if (target.length) {
         $('html, body').animate({
-          scrollTop: (target.offset().top - 54)
+          scrollTop: (target.offset().top - 70)
         }, 1000, "easeInOutExpo");
         return false;
       }
     }
-  });
-
-  //Typed.js 
-  var typed = new Typed('#typed', {
-    stringsElement: '#typed-strings'
   });
 
   // Closes responsive menu when a scroll trigger link is clicked
@@ -28,7 +23,7 @@
   // Activate scrollspy to add active class to navbar items on scroll
   $('body').scrollspy({
     target: '#mainNav',
-    offset: 56
+    offset: 100
   });
 
   // Collapse Navbar
@@ -43,13 +38,5 @@
   navbarCollapse();
   // Collapse the navbar when page is scrolled
   $(window).scroll(navbarCollapse);
-
-  // Hide navbar when modals trigger
-  $('.portfolio-modal').on('show.bs.modal', function(e) {
-    $('.navbar').addClass('d-none');
-  })
-  $('.portfolio-modal').on('hidden.bs.modal', function(e) {
-    $('.navbar').removeClass('d-none');
-  })
 
 })(jQuery); // End of use strict

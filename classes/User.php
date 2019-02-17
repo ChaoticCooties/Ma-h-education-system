@@ -124,6 +124,22 @@ class User {
 		}
 		
 		return false;
+	}
+	
+	public function getInviteCode($classID) { //get invite code from class id
+        $hash = Hash::unique();
+        $hashCheck = $this->_db->get('class', array('name','=',$classID));
+
+        if(!$hashCheck->count()) { //set code if not present
+        $this->_db->insert('class', array(
+            'name'  => $class,
+            'code'  => $hash
+        ));
+        } else {
+            $hash = $hashCheck->first()->code; //return code if present
+        }
+
+        return $hash;
     }
 
 	public function exists() {
