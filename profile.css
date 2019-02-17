@@ -1,0 +1,45 @@
+html, body {
+	height: 100%;
+	margin: 0px;
+}
+
+ul{
+ min-width: 696px;
+	list-style: none;
+	padding-top: 20px; 
+}
+
+li{
+  display: inline;
+  }
+
+body {
+	background-color: #34363f;
+}
+
+p{
+  color: #F1F1F1;
+  text-align: left;
+  font-family: 'Montserrat';
+  margin-top: 45px;
+  margin-left: 45px;
+}
+
+.col-12{
+  text-align: center;
+}
+
+input[type = button] {
+  padding: 12px 15px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  background-color: #FED136;
+  color: white;
+  position:relative;
+  margin-top:350px;
+}
+
+input[type = button]:hover {
+  background-color: #C7A000;
+}
