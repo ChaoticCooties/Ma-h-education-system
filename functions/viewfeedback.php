@@ -1,6 +1,14 @@
 <?php
-//only login
-//only admin
+
+require '../core/start.php';
+
+$user = new User();
+if(!$user->isLoggedIn()) {
+  Redirect::to('home.php');
+}
+if (!$user->hasPermission("admin")) {
+	Redirect::to('home.php');
+}
 
 /* Connect to database */
 $conn = mysqli_connect('localhost','root','','sdp');
