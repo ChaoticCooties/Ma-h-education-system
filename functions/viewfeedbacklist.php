@@ -1,10 +1,14 @@
 <?php
 
+require '../core/start.php';
+
 $user = new User();
 if(!$user->isLoggedIn()) {
     Redirect::to('home.php');
 }
-//ONLY ADMIN
+if (!$user->hasPermission("admin")) {
+	Redirect::to('home.php');
+}
 
 /* Connect to database */
 $conn = mysqli_connect('localhost','root','','sdp');

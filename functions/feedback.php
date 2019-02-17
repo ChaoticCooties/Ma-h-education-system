@@ -1,12 +1,14 @@
 <?php
 
 require '../core/start.php';
-//ONLY TEACHERS CAN ACCESS
 //NEED TO ADD OUTPUT
 
 $user = new User();
 if(!$user->isLoggedIn()) {
     Redirect::to('home.php');
+}
+if (!$user->hasPermission("moderator")) {
+	Redirect::to('home.php');
 }
 
 if(Input::exists()) {
@@ -29,10 +31,11 @@ if(Input::exists()) {
 
 	if(mysqli_affected_rows($conn) <=0)
 	{
-		echo "<script>window.location.href='feedback?e=0';</script>";
+		Session::flash("state", "Failed to send feedback");
 	} else {
-		echo "<script>window.location.href='feedback?s=0';</script>";
+    Session::flash("state", "Successfully sent feedback");
 	}
+
 }
 ?>
 <!DOCTYPE html>
@@ -42,6 +45,9 @@ if(Input::exists()) {
 	<link href="../css/feedback.css" rel="stylesheet">
 </head>
 <body>
+  <div class="message">
+    <?php echo Session::flash("state"); ?>
+  </div>
 	<div class="container">
 		<div class="title">Feedback</div>
 		<form action="" method="post">
@@ -52,6 +58,7 @@ if(Input::exists()) {
 			<textarea name="message"></textarea>
 			<br/><br/>
 			<div class="button">
+        <a href="profile.php">Back to profile</a>
 				<input name="submit" type="submit" />
 				<input name="reset" type="reset" />
 			</div>
