@@ -6,7 +6,7 @@ $GLOBALS['config'] = array(
 		'host' => '127.0.0.1', //Localhost without DNS lookup
 		'username' => 'root', //conection
 		'password' => '',
-		'db' => 'math'
+		'db' => 'sdp'
 	),
 	'remember' => array(
 		'cookie_name' => 'hash',
