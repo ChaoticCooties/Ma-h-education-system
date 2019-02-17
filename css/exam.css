@@ -1,0 +1,118 @@
+html, body {
+	height: 100%;
+	margin: 0px;
+	font-family: Arial;
+	color: white;
+}
+
+body {
+	background-color: #222;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+}
+
+.main {
+	width: 80%;
+	float: left;
+	margin: 20px 0px 0px 5%;
+}
+
+.title {
+	width: auto;
+	height: 40px;
+	line-height: 40px;
+	font-size: 30px;
+	margin-bottom: 10px;
+	background-color: #111111;
+	border: 0px;
+	border-radius: 3px;
+	padding: 5px;
+}
+
+.qcontainer {
+	width: auto;
+	height: 350px;
+	background-color: #111111;
+	padding: 10px;
+	border: 0px;
+	border-radius: 3px;
+}
+
+.questionno {
+	float: left;
+}
+
+.question {
+	width: 95%;
+	text-align: justify;
+	float: right;
+}
+
+.answers {
+	width: 100%;
+	height: auto;
+	margin-top: 5px;
+}
+
+.answers div {
+	width: 47%;
+	height: 50px;
+	padding: 5px;
+	background-color: #111111;
+	border: 0px;
+	border-radius: 3px;
+}
+
+.answerA, .answerC {
+	float: left;
+	margin: 5px 0px;
+}
+
+.answerB, .answerD {
+	float: right;
+	margin: 5px 0px;
+}
+
+.side {
+	width: 10%;
+	float: right;
+	margin: 20px 2% 0px 0px;
+}
+
+.time {
+	text-align: center;
+	height: 40px;
+	background-color: #111111;
+	border: 0px;
+	border-radius: 3px;
+	padding: 5px;
+	margin-bottom: 10px;
+}
+
+.selector {
+	background-color: #111111;
+	border: 0px;
+	border-radius: 3px;
+	padding: 5px;
+	height: 500px;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.selector span {
+	height: auto;
+	margin: 100px 0px;
+}
+
+.submit {
+	text-align: center;
+	height: 40px;
+	background-color: #111111;
+	border: 0px;
+	border-radius: 3px;
+	padding: 5px;
+	margin-bottom: 10px;
+}

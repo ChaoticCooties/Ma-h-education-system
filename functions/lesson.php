@@ -37,13 +37,13 @@ if(mysqli_affected_rows($conn) <=0)
 
   if (isset($_POST["submit"])) {
     $lesson += 1;
-    if ($lesson > 4) {
+    if ($lesson > 5) {
       $grade += 1;
       $lesson = 1;
     }
     $sql = "UPDATE student_progress SET gradeNo = $grade, lessonNo = $lesson WHERE studentID = $id";
     mysqli_query($conn, $sql);
-    echo "<script>window.location.href='lesson.php';</script>";
+    Redirect::to("profile.php");
   }
 
   $sql2 = "SELECT lesson FROM lesson WHERE gradeNo = $grade AND lessonNo = $lesson";
