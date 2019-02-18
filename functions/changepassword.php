@@ -46,30 +46,22 @@ if(Input::exists()) {
 }
 ?>
 
-		<div class="row list-row">
-			<div class="row">
-				<div class="col-12">
-					<form action="" method="POST">
-						<div class="field">
-							<label for="password current">Current Password</label>
-							<input type="password" name="password_current" id="password_current">
-						</div>
+<form action="" method="POST">
+	<div class="field">
+		<label for="password current">Current Password</label>
+		<input type="password" name="password_current" id="password_current">
+	</div>
 
-						<div class="field">
-							<label for="password_new">New Password</label>
-							<input type="password" name="password_new" id="password_new">
-						</div>
+	<div class="field">
+		<label for="password_new">New Password</label>
+		<input type="password" name="password_new" id="password_new">
+	</div>
 
-						<div class="field">
-							<label for="password_new_again">Confirm New Password</label>
-							<input type="password" name="password_new_again" id="password_new_again">
-						</div>
+	<div class="field">
+		<label for="password_new_again">Confirm New Password</label>
+		<input type="password" name="password_new_again" id="password_new_again">
+	</div>
 
-						<input type="submit" value="Change">
-						<input type="hidden" name="token" value="<?php echo Token::generate(); ?>">
-					</form>
-	            </div><!-- .col -->
-			</div><!-- .row -->
-		</div><!-- .list-row -->
-	</div><!-- .container -->
-</div><!-- .outer-container -->
+	<input type="submit" value="Change">
+	<input type="hidden" name="token" value="<?php echo Token::generate(); ?>">
+</form>

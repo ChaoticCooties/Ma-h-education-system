@@ -36,7 +36,7 @@ if(Input::exists()) {
 		if($validation->passed()) {
 			$user = new User();
 
-			$salt = Hash::salt(16); //Hash::salt(16) | can't fix this shit yet will come back later changepassword
+			$salt = ""; //Hash::salt(16) | can't fix this shit yet will come back later changepassword
 
 			try {
 

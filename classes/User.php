@@ -128,6 +128,41 @@ class User {
 		return false;
 	}
 
+	public function joinClass($id,$code) {
+        $class = $this->_db->get('class', array('code','=',$code));
+
+        if($class->count()) {
+            $classCheck = $this->_db->get('user_class', array('id','=',$id)); //check if user is in a class already.
+
+            if(!$classCheck) { //add into db if not in class
+                $this->_db->insert('user_class', array (
+                    'userID'    => $id,
+                    'classID'   => $class
+				));
+				
+				return true;
+            }
+		}
+		
+		return false;
+	}
+	
+    public function getClassCode($name) { //get invite code from class id
+        $hash = Hash::unique();
+        $classArr = $this->_db->get('class', array('name','=',$name));
+
+        if(!$classArr->count()) { //set code if not present
+			$this->_db->insert('class', array(
+				'name'	=> $name,
+				'code'  => $hash
+			));
+        } else {
+            $hash = $classArr->first()->code; //return code if present
+        }
+
+        return $hash;
+    }
+
 	public function exists() {
 		return (!empty($this->_data)) ? true : false;
 	}
