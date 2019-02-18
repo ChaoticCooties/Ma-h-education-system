@@ -41,6 +41,9 @@
             <a class="nav-link js-scroll-trigger" href="#whyus">Why Us?</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="../app/views/game/index.html">Game</a>
+          </li>
+          <li class="nav-item">
             <?php if($user->isLoggedIn()): ?>
               <a class="nav-link" href="../functions/profile.php">Profile</a>
             <?php else : ?>
