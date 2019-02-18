@@ -117,7 +117,16 @@ class User {
         }
 
         return false;
-    }
+	}
+	
+	public function hasPlacement($userID) {
+		$progressArr = $this->_db->get('student_progress', array('studentID','=',$userID));
+		if($progressArr->count()) {
+			return true;
+		} 
+
+		return false;
+	}
 
 	public function exists() {
 		return (!empty($this->_data)) ? true : false;
