@@ -100,7 +100,7 @@ if(mysqli_affected_rows($conn) > 0) {
   //$arrayQuiz = [question,correct answer,A,B,C,D]
   $_SESSION["placementQ"] = $arrayQuiz;
   //save question for later
-  print_r($_SESSION["placementQ"]);
+  //print_r($_SESSION["placementQ"]);
 }
 
 require VIEW_ROOT . '/placement.php';

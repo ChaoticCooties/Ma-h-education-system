@@ -1,0 +1,48 @@
+html, body {
+	height: 100%;
+	margin: 0px;
+	font-family: Arial;
+	color: white;
+}
+
+body {
+	background-image: url("../images/homebg.png");
+}
+
+.ptitle, .rtitle {
+	width: 42%;
+	font-size: 24px;
+	margin: 20px 2% 5px 2%;
+	padding: 20px 2%;
+	background-color: #111;
+  text-align: center;
+}
+
+.ptitle {
+  float: left;
+}
+
+.rtitle {
+  float: right;
+}
+
+.progress, .result {
+	width: 42%;
+	height: 450px;
+	padding: 20px 2%;
+	background-color: #111;
+}
+
+.progress {
+	margin: 10px 0px 0px 2%;
+	float: left;
+}
+
+.result {
+	margin: 10px 2% 0px 0px;
+	float: right;
+}
+
+table {
+  width: 100%;
+}

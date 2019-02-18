@@ -28,7 +28,7 @@ if(mysqli_affected_rows($conn) <= 0) {
   $row = mysqli_fetch_assoc($result);
 
   if ($row["lessonNo"] != 5) {
-    Redirect::to("home.php");
+    Redirect::to("profile.php");
   } else {
     $grade = $row["gradeNo"];
     $sql = "SELECT * FROM results WHERE studentID = $id AND gradeNo = $grade";
@@ -36,7 +36,10 @@ if(mysqli_affected_rows($conn) <= 0) {
     $result = mysqli_query($conn, $sql);
 
     if(mysqli_affected_rows($conn) > 0) {
-      Redirect::to("home.php");
+      $grade += 1;
+      $sqlInsert = "UPDATE student_progress SET gradeNo = $grade, lessonNo = 1 WHERE studentID = $id";
+      mysqli_query($conn, $sqlInsert);
+      Redirect::to("profile.php");
     }
   }
 }

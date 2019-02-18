@@ -27,13 +27,8 @@ if(mysqli_affected_rows($conn) <=0)
 } else {
   $row = mysqli_fetch_assoc($result);
 
-  if ($row["lessonNo"] == 4) {
-    $grade = $row["gradeNo"] + 1;
-    $lesson = 1;
-  } else {
-    $grade = $row["gradeNo"];
-    $lesson = $row["lessonNo"];
-  }
+  $grade = $row["gradeNo"];
+  $lesson = $row["lessonNo"];
 
   if (isset($_POST["submit"])) {
     $lesson += 1;
