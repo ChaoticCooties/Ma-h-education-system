@@ -147,20 +147,21 @@ class User {
 		return false;
 	}
 	
-    public function getClassCode($name) { //get invite code from class id
-        $hash = Hash::unique();
-        $classArr = $this->_db->get('class', array('name','=',$name));
+	public function idToClassID($id = null) {
+		$user_classArr = $this->_db->get('user_class', array('userID','=',$id));
+		if($user_classArr->count()){
+			$classID = $user_classArr->first()->classID;
+			return $classID;
+		}
+	}
 
-        if(!$classArr->count()) { //set code if not present
-			$this->_db->insert('class', array(
-				'name'	=> $name,
-				'code'  => $hash
-			));
-        } else {
-            $hash = $classArr->first()->code; //return code if present
+	public function getClassCode($id) { //get invite code from class id
+        $classArr = $this->_db->get('class', array('classID','=',$id));
+
+        if($classArr->count()) {//return code if present //set code if not present
+			$hash = $classArr->first()->code; 
+			return $hash;
         }
-
-        return $hash;
     }
 
 	public function exists() {

@@ -7,7 +7,7 @@ if(!$user->isLoggedIn()) {
 
 <body id="page-top">
 
-<p>Welcome back, User!</p>
+<p>Welcome back, <?php echo $user->data()->username ?></p>
 <ul> 
     <li><a href="home.php">Home</a></li>
     <li><a href="updatedetails.php">Update Details</a></li>

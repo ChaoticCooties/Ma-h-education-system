@@ -3,7 +3,7 @@ require_once '../core/start.php';
 require APP_ROOT . 'views/templates/header.php';
 $user = new User();
 if(!$user->isLoggedIn()) {
-	Redirect::to('index.php');
+	Redirect::to('home.php');
 }
 if(Input::exists()) { //csrf protection
 	if(Token::check(Input::get('token'))) {

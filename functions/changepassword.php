@@ -3,7 +3,7 @@ require_once '../core/start.php';
 require APP_ROOT . 'views/templates/header.php';
 $user = new User();
 if(!$user->isLoggedIn()) { //check if logged in
-	Redirect::to('index.php'); //else redirect
+	Redirect::to('home.php'); //else redirect
 }
 if(Input::exists()) {
 	if(Token::check(Input::get('token'))) { //csrf protection
@@ -35,7 +35,7 @@ if(Input::exists()) {
 					'salt' => $salt
 				));
 				Session::flash('home', 'Your password has been changed!');
-				Redirect::to('index.php');
+				Redirect::to('profile.php');
 			}
 		} else {
 			foreach($validation->errors() as $error) { 

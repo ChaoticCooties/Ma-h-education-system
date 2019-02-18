@@ -36,7 +36,7 @@ if(Input::exists()) {
 		if($validation->passed()) {
 			$user = new User();
 
-			$salt = ""; //Hash::salt(16) | can't fix this shit yet will come back later changepassword
+			$salt = ''; //Hash::salt(16) | can't fix this shit yet will come back later changepassword
 
 			try {
 
@@ -50,7 +50,7 @@ if(Input::exists()) {
 				));
 
 				Session::flash('home', 'Registry successful, You may now Login!');
-				Redirect::to('home.php');
+				Redirect::to('profile.php');
 
 			} catch(Exception $e) { //error if registering (will change)
 				die($e->getMessage());
