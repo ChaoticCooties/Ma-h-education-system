@@ -1,15 +1,17 @@
-<?php require APP_ROOT . 'views/templates/header.php';
-      require APP_ROOT . 'views/templates/navbar.php'; ?>
+<?php require APP_ROOT . 'views/templates/header.php';?>
 
 <?php $user = new User();
 if(!$user->isLoggedIn()) {
     Redirect::to('home.php');
-}
+} ?>
 
+<body id="page-top">
+
+<?php
 if($user->examReady($user->data()->id)) {
-    echo "You are ready for exam";
+    echo "You are ready for the exam";
 } else {
-     echo "You are not ready for exam";
+     echo "You are not ready for the exam";
 }
 ?>
 

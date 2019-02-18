@@ -112,7 +112,7 @@
   <script src='https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.1/typed.min.js'></script>
 
   <!-- Custom scripts for this template -->
-  <script src="../js/main.js"></script>
+  <script src ="../js/main.js"></script>
   <script src="../js/autotype.js"></script>
 </body>
 </html>
