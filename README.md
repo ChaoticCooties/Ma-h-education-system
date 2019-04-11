@@ -1,7 +1,10 @@
-# Ma+h education system 
+# Ma+h education system (ABANDONED)
+This broken piece of software has since been submitted as an assignment (as much as I hate it) and will no longer be developed due to spaghetti code and a language I'm not interested to work further on --> PHP. Refer to the upcoming MERN stack quiz web application which will include deployment for demoing.
+
 > A web development project done with PHP/HTML/CSS/Javascript/Unity
 
-A math education platform with extra game features, this is a collaboration.
+A math education platform with extra game features, this is a collaboration for an assignment.
+
 
 ## Goals
 
