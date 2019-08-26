@@ -1,5 +1,5 @@
 # Ma+h education system (ABANDONED)
-This broken piece of software has since been submitted as an assignment (as much as I hate it) and will no longer be developed due to spaghetti code and a language I'm not interested to work further on --> PHP. Refer to the upcoming MERN stack quiz web application which will include deployment for demoing.
+This was a final assignment project which was badly done with the help of my groupmates. Unfortunately, due to time constraints and the lack of skills between my team members, we were unable to deliver a quality end product. Regardless, this repository will be placed here as it is still a demonstration of various skills and technologies I have learned.
 
 > A web development project done with PHP/HTML/CSS/Javascript/Unity
 
