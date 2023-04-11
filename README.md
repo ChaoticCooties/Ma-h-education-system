@@ -1,5 +1,5 @@
 # Ma+h education system (ABANDONED)
-This was a final assignment project which was badly done with the help of my groupmates. Unfortunately, due to time constraints and the lack of skills between my team members, we were unable to deliver a quality end product. Regardless, this repository will be placed here as it is still a demonstration of various skills and technologies I have learned.
+This was a final assignment project which was badly done with the help of my groupmates. ~~Unfortunately, due to time constraints and the lack of skills between my team members~~ (EDIT: As of 2023 I have been instructed by my previous team members to censor this statement due to its passive aggressiveness), we were unable to deliver a quality end product. Regardless, this repository will be placed here as it is still a demonstration of various skills and technologies I have learned.
 
 > A web development project done with PHP/HTML/CSS/Javascript/Unity
 
